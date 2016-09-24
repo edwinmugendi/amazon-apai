@@ -39,7 +39,7 @@ $apai->setParam('Keywords', 'hp laptop');
 $verbose = true; //Print url sent to Amazon and the results from Amazon
 $response = $apai->itemSearch($verbose);
 ```
-5. Handle the response. The response is an array with status and response keys. 
+5. Handle the response. The response is an array with <code>status</code> and <code>response</code> keys. If the request is successful, <code>status</code> will be <code>1</code> and <code>response</code> will have the xml, otherwise <code>status</code> will be <code>0</code> and <code>response</code> will have the error message. You should the parse the <code>response</code> with <code>SimpleXMLElement</code>
 ```php
 if ($response['status']) {
     $item_lookup_xml = new \SimpleXMLElement($response['response']);

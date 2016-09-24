@@ -1,5 +1,5 @@
 <h1>Amazon Product Advertising API wrapper</h1>
-<p>This library wraps the following functions of Amazon's Product Advertising API</p>
+<p>This library wraps the following functions of <a href="http://docs.aws.amazon.com/AWSECommerceService/latest/DG/Welcome.html">Amazon's Product Advertising API</a>:</p>
 1. <a href="http://docs.aws.amazon.com/AWSECommerceService/latest/DG/ItemSearch.html">ItemSearch</a><br>
 2. <a href="http://docs.aws.amazon.com/AWSECommerceService/latest/DG/BrowseNodeLookup.html">BrowseNodeLookup</a><br>
 3. <a href="http://docs.aws.amazon.com/AWSECommerceService/latest/DG/ItemLookup.html">ItemLookup</a><br>
@@ -39,7 +39,7 @@ $apai->setParam('Keywords', 'hp laptop');
 $verbose = true; //Print url sent to Amazon and the results from Amazon
 $response = $apai->itemSearch($verbose);
 ```
-5. Handle the response. The response is an array with <code>status</code> and <code>response</code> keys. If the request is successful, <code>status</code> will be <code>1</code> and <code>response</code> will have the xml, otherwise <code>status</code> will be <code>0</code> and <code>response</code> will have the error message. You should the parse the <code>response</code> with <code>SimpleXMLElement</code>
+5. Handle the response. The response is an array with <code>status</code> and <code>response</code> keys. If the request is successful, <code>status</code> will be <code>1</code> and <code>response</code> will have the xml string that you should parse with <code>SimpleXMLElement</code>, otherwise <code>status</code> will be <code>0</code> and <code>response</code> will have the error message.
 ```php
 if ($response['status']) {
     $item_lookup_xml = new \SimpleXMLElement($response['response']);

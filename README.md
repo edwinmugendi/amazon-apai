@@ -20,31 +20,32 @@ use Edwinmugendi\Amazon\Apai;
 $apai = new Apai();
 ```
 2. Set the following 4 configs using the <code>$apai->setConfig()</code> function
-
+```php
 //Set configs
 $apai->setConfig('ApiKey', 'XXXXX');
 $apai->setConfig('ApiSecret', 'XXXX');
 $apai->setConfig('AssociativeTag', 'XXXX');
 $apai->setConfig('EndPoint', 'webservices.amazon.de');
-
+```
 3. Set the parameters using the <code>$apai->setParam()</code> function
+```php
 //Set parameters
 $apai->setParam('SearchIndex', 'All');
 $apai->setParam('ResponseGroup', 'Offers');
 $apai->setParam('Keywords', 'hp laptop');
-
+```
 4. Call the actual function eg ItemSearch
-
+```php
 $verbose = true; //Print url sent to Amazon and the results from Amazon
 $response = $apai->itemSearch($verbose);
-
+```
 5. Handle the response. The response is an array with status and response keys. 
-
+```php
 if ($response['status']) {
     $item_lookup_xml = new \SimpleXMLElement($response['response']);
 } else {
     echo $response['response'];
 }//E# if else statement
-
+```php
 For sample code, check the <code>tests</code> folder.
 

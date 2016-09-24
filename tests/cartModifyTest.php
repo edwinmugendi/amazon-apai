@@ -5,11 +5,13 @@ require_once __DIR__ . '/../vendor/autoload.php'; // Autoload files using Compos
 use Edwinmugendi\Amazon\Apai;
 
 $apai = new Apai();
+
 //Set configs
-$apai->setConfig('ApiKey', 'AKIAJJWWS3SKYX44LSIA');
-$apai->setConfig('ApiSecret', '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');
-$apai->setConfig('AssociativeTag', 'shopcons02-21');
+$apai->setConfig('ApiKey', 'XXXX');
+$apai->setConfig('ApiSecret', 'XXXX');
+$apai->setConfig('AssociativeTag', 'XXXX');
 $apai->setConfig('EndPoint', 'webservices.amazon.de');
+
 
 //Set parameters
 $apai->setParam('CartId', '23312123');

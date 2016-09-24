@@ -12,13 +12,14 @@ $apai->setConfig('AssociativeTag', 'shopcons02-21');
 $apai->setConfig('EndPoint', 'webservices.amazon.de');
 
 //Set parameters
-$apai->setParam('ItemId', 'All');
-$apai->setParam('IdType', 'ASIN');
-$apai->setParam('ResponseGroup', 'ItemAttributes,Offers');
+$apai->setParam('CartId', '23312123');
+$apai->setParam('HMAC', '[URL-encoded HMAC]'); //Check the documentation on how to generate this: http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CartAdd.html
+$apai->setParam('Item.1.OfferListingId', '');
+$apai->setParam('Item.1.Quantity', '');
 
 $verbose = true; //Print url sent to Amazon and the results from Amazon
 
-$response = $apai->itemLookup($verbose);
+$response = $apai->cartAdd($verbose);
 
 //Response
 var_dump($response);

@@ -20,7 +20,11 @@ $verbose = true; //Print url sent to Amazon and the results from Amazon
 
 $response = $apai->itemSearch($verbose);
 
-//XML from 
+//Response
 var_dump($response);
 
-$item_lookup_xml = new \SimpleXMLElement($response);
+if ($response['status']) {
+    $item_lookup_xml = new \SimpleXMLElement($response['response']);
+} else {
+    echo $response['response'];
+}//E# if else statement

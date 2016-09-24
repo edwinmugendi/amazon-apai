@@ -12,13 +12,12 @@ $apai->setConfig('AssociativeTag', 'shopcons02-21');
 $apai->setConfig('EndPoint', 'webservices.amazon.de');
 
 //Set parameters
-$apai->setParam('ItemId', 'All');
-$apai->setParam('IdType', 'ASIN');
-$apai->setParam('ResponseGroup', 'ItemAttributes,Offers');
+$apai->setParam('ItemId', 'ASIN1,ASIN2,ASIN3');
+$apai->setParam('SimilarityType', 'Random');
 
 $verbose = true; //Print url sent to Amazon and the results from Amazon
 
-$response = $apai->itemLookup($verbose);
+$response = $apai->similarityLookup($verbose);
 
 //Response
 var_dump($response);

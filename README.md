@@ -46,6 +46,7 @@ if ($response['status']) {
 } else {
     echo $response['response'];
 }//E# if else statement
-```php
-For sample code, check the <code>tests</code> folder.
+```
+For sample code of every function, check the <code>tests</code> folder.
 
+Contact me on edwinmugendi@gmail.com if you need any assistance.

@@ -27,19 +27,24 @@ $apai->setConfig('ApiSecret', 'XXXX');
 $apai->setConfig('AssociativeTag', 'XXXX');
 $apai->setConfig('EndPoint', 'webservices.amazon.de');
 ```
-3. Set the parameters using the <code>$apai->setParam()</code> function
+3. If you are looping via a list of items, you might need to reset the parameters. This basically removes any preset parameters
+```php
+//Reset parameters first. This is important if you are looping through items
+$apai->resetParam();
+```
+4. Set the parameters using the <code>$apai->setParam()</code> function
 ```php
 //Set parameters
 $apai->setParam('SearchIndex', 'All');
 $apai->setParam('ResponseGroup', 'Offers');
 $apai->setParam('Keywords', 'hp laptop');
 ```
-4. Call the actual function eg ItemSearch
+5. Call the actual function eg ItemSearch
 ```php
 $verbose = true; //Print url sent to Amazon and the results from Amazon
 $response = $apai->itemSearch($verbose);
 ```
-5. Handle the response. The response is an array with <code>status</code> and <code>response</code> keys. If the request is successful, <code>status</code> will be <code>1</code> and <code>response</code> will have the xml string that you should parse with <code>SimpleXMLElement</code>, otherwise <code>status</code> will be <code>0</code> and <code>response</code> will have the error message.
+6. Handle the response. The response is an array with <code>status</code> and <code>response</code> keys. If the request is successful, <code>status</code> will be <code>1</code> and <code>response</code> will have the xml string that you should parse with <code>SimpleXMLElement</code>, otherwise <code>status</code> will be <code>0</code> and <code>response</code> will have the error message.
 ```php
 if ($response['status']) {
     $item_lookup_xml = new \SimpleXMLElement($response['response']);

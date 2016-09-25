@@ -11,6 +11,9 @@ $apai->setConfig('ApiSecret', 'XXXX');
 $apai->setConfig('AssociativeTag', 'XXXX');
 $apai->setConfig('EndPoint', 'webservices.amazon.de');
 
+//Reset parameters first. This is important if you are looping through items
+$apai->resetParam();
+
 //Set parameters
 $apai->setParam('BrowseNodeId', '163357');
 $apai->setParam('ResponseGroup', 'NewReleases');

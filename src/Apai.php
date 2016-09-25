@@ -16,6 +16,20 @@ class Apai {
     private $configs = array();
 
     /**
+     * S# resetParam() function
+     * 
+     * @author Edwin Mugendi <edwinmugendi@gmail.com>
+     * 
+     * Reset parameters
+     * 
+     */
+    public function resetParam() {
+        $this->params = array();
+    }
+
+//E# resetParam() function
+
+    /**
      * S# setConfig() function
      * 
      * @author Edwin Mugendi <edwinmugendi@gmail.com>
@@ -45,7 +59,7 @@ class Apai {
     }
 
 //E# setParam() function
-        /**
+    /**
      * S# cartModify() function
      * 
      * @author Edwin Mugendi <edwinmugendi@gmail.com>

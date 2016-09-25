@@ -11,6 +11,9 @@ $apai->setConfig('ApiSecret', 'XXXX');
 $apai->setConfig('AssociativeTag', 'XXXX');
 $apai->setConfig('EndPoint', 'webservices.amazon.de');
 
+//Reset parameters first. This is important if you are looping through items
+$apai->resetParam();
+
 //Set parameters
 $apai->setParam('ItemId', 'ASIN1,ASIN2,ASIN3');
 $apai->setParam('SimilarityType', 'Random');

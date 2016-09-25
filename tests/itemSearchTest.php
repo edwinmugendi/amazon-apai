@@ -11,7 +11,6 @@ $apai->setConfig('ApiSecret', 'XXXX');
 $apai->setConfig('AssociativeTag', 'XXXX');
 $apai->setConfig('EndPoint', 'webservices.amazon.de');
 
-
 //Set parameters
 $apai->setParam('SearchIndex', 'All');
 $apai->setParam('ResponseGroup', 'Offers');

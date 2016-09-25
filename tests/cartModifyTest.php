@@ -12,7 +12,6 @@ $apai->setConfig('ApiSecret', 'XXXX');
 $apai->setConfig('AssociativeTag', 'XXXX');
 $apai->setConfig('EndPoint', 'webservices.amazon.de');
 
-
 //Set parameters
 $apai->setParam('CartId', '23312123');
 $apai->setParam('HMAC', ''); //Check the documentation on how to generate this: http://docs.aws.amazon.com/AWSECommerceService/latest/DG/CartAdd.html

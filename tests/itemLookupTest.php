@@ -11,7 +11,6 @@ $apai->setConfig('ApiSecret', 'XXXX');
 $apai->setConfig('AssociativeTag', 'XXXX');
 $apai->setConfig('EndPoint', 'webservices.amazon.de');
 
-
 //Set parameters
 $apai->setParam('ItemId', 'All');
 $apai->setParam('IdType', 'ASIN');
